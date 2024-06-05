@@ -6,6 +6,10 @@ export const cores = {
   branco: '#FFF8F2',
   branco2: '#FFFFFF'
 }
+export const BreakPoints = {
+  desktop: '1024px',
+  tablet: '768px;'
+}
 
 export const GlobalCss = createGlobalStyle`
   * {
@@ -22,5 +26,8 @@ export const GlobalCss = createGlobalStyle`
   .container {
     width: 1024px;
     margin: auto;
+    @media (max-width: ${BreakPoints.desktop}) {
+      max-width: 80%;
+    }
   }
 `

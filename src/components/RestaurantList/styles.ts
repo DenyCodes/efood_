@@ -5,7 +5,6 @@ export const Container = styled.section`
 `
 
 export const List = styled.ul`
-  width: 100%;
   display: grid;
   grid-template-columns: 2fr 2fr;
   column-gap: 60px;
