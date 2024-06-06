@@ -16,6 +16,7 @@ import { useGetFeatureCardapioQuery } from '../../services/api'
 import { useDispatch } from 'react-redux'
 import { Cardapio } from '../pages/Product'
 import { add, open } from '../../store/reducers/cart'
+import closeImg from '../../images/close 1.png'
 
 type Props = {
   cardapio: Cardapio
@@ -55,7 +56,9 @@ const Food = ({ cardapio }: Props) => {
       {isModalOpen && (
         <ModalOverlay onClick={handleCloseModal}>
           <ModalContent onClick={(e) => e.stopPropagation()}>
-            <CloseButton onClick={handleCloseModal}>X</CloseButton>
+            <CloseButton onClick={handleCloseModal}>
+              <img src={closeImg} />
+            </CloseButton>
             <ModalImage src={cardapio.foto} />
             <ModalDetails>
               <h2>{cardapio.nome}</h2>

@@ -14,7 +14,7 @@ export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   img {
-    max-width: 472px;
+    max-width: 304px;
     width: 100%;
   }
 `
@@ -27,6 +27,7 @@ export const Destaque = styled.div`
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
+  display: none;
   line-height: normal;
   width: 121px;
   height: 30px;

@@ -39,6 +39,7 @@ export const Image = styled.img`
   margin-left: 10px;
 `
 export const LI = styled.li`
+  margin-bottom: 10px;
   align-items: center;
   display: flex;
   color: #fff;
@@ -89,6 +90,7 @@ export const Prices = styled.div`
   line-height: normal;
 `
 export const ButtonX = styled.button`
+  cursor: pointer;
   background-image: url(${fechar});
   width: 16px;
   background-color: transparent;
@@ -98,4 +100,66 @@ export const ButtonX = styled.button`
   height: 16px;
   flex-shrink: 0;
   border: none;
+`
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`
+
+export const Input = styled.input`
+  width: 344px;
+  height: 32px;
+  flex-shrink: 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`
+
+export const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+`
+
+export const InlineInputs = styled.div`
+  display: flex;
+  gap: 10px;
+`
+
+export const SmallInput = styled(Input)`
+  width: calc((344px - 10px) / 2);
+`
+
+export const CardNumberInput = styled(Input)`
+  width: calc((344px * 2 / 3) - 5px);
+`
+
+export const CVVInput = styled(Input)`
+  width: calc((344px / 3) - 5px);
+`
+export const Finish = styled.h1`
+  color: #ffebd9;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`
+export const FinishP = styled.p`
+  width: 344px;
+  color: #ffebd9;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+`
+export const Title = styled.h2`
+  margin-bottom: 20px;
+`
+
+export const Text = styled.p`
+  margin-bottom: 30px;
+  text-align: justify;
 `

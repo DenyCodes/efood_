@@ -4,7 +4,7 @@ import { cores } from '../../styles'
 
 export const Card = styled.div`
   width: 320px;
-  height: 350px;
+  height: 338px;
   flex-shrink: 0;
   background-color: #e66767;
   position: relative;
@@ -36,12 +36,13 @@ export const Infos = styled.div`
   right: 16px;
 `
 export const Images = styled.img`
-  width: 472px;
-  height: 217px;
+  width: 280px;
+  height: 167px;
   flex-shrink: 0;
   margin: 0;
 `
 export const Div = styled.div`
+  margin-top: 8px;
   width: 304px;
   height: 181px;
   flex-shrink: 0;
@@ -54,6 +55,8 @@ export const Star = styled.div`
   position: absolute;
 `
 export const Botao = styled.div`
+  cursor: pointer;
+  margin-top: 20px;
   width: 304px;
   height: 24px;
   flex-shrink: 0;
@@ -122,6 +125,14 @@ export const ModalDetails = styled.div`
   top: -54px;
   position: relative;
   flex-direction: column;
+  p {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+  }
 `
 
 export const CloseButton = styled.button`

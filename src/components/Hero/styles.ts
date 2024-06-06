@@ -55,6 +55,7 @@ export const Restaurant = styled.div`
 `
 
 export const Carrinho = styled.a`
+  cursor: pointer;
   display: flex;
   color: #e66767;
   font-family: Roboto;
