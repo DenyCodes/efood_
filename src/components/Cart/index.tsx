@@ -254,7 +254,6 @@ const Cart = () => {
         )}
         {step === 4 && (
           <div>
-            <Finish>Pedido realizado - ORDERID</Finish>
             <FinishP>
               <Title>Pedido realizado </Title>
               <Text>
