@@ -15,7 +15,6 @@ import {
   CardNumberInput,
   CVVInput,
   SmallInput,
-  Finish,
   FinishP,
   Title,
   Text
@@ -27,6 +26,7 @@ import { close, remove } from '../../store/reducers/cart'
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
   const [step, setStep] = useState(1)
+  const [orderId, setOrderId] = useState<number | null>(null)
   const [deliveryData, setDeliveryData] = useState({
     nome: '',
     endereco: '',
@@ -88,6 +88,10 @@ const Cart = () => {
     // Lógica para finalizar pedido
     console.log('Delivery data:', deliveryData)
     console.log('Payment data:', paymentData)
+    // Simulate order ID generation
+    const newOrderId = Math.floor(Math.random() * 100000)
+    setOrderId(newOrderId)
+    handleNextStep()
   }
 
   const totalAmount = items
@@ -249,13 +253,13 @@ const Cart = () => {
             <Button type="button" onClick={handlePreviousStep}>
               Voltar para Entrega
             </Button>
-            <Button onClick={handleNextStep}>Finalizar Pedido</Button>
+            <Button type="submit">Finalizar Pedido</Button>
           </Form>
         )}
-        {step === 4 && (
+        {step === 4 && orderId !== null && (
           <div>
             <FinishP>
-              <Title>Pedido realizado </Title>
+              <Title>Pedido realizado - {orderId}</Title>
               <Text>
                 Estamos felizes em informar que seu pedido já está em processo
                 de preparação e, em breve, será entregue no endereço fornecido.
