@@ -3,7 +3,7 @@ import { Cardapio } from '../components/pages/Product'
 
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://fake-api-tau.vercel.app/api/efood'
+    baseUrl: 'https://ebac-fake-api.vercel.app/api/efood/restaurantes/{id}'
   }),
   endpoints: (builder) => ({
     getFeatureCardapio: builder.query<Cardapio, void>({

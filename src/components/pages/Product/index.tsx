@@ -24,7 +24,7 @@ const Product = () => {
   const [restaurant, setRestaurant] = useState<Restaurante | null>(null)
 
   useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+    fetch('https://ebac-fake-api.vercel.app/api/efood/restaurantes')
       .then((res) => res.json())
       .then((data) => {
         console.log('Data from API:', data) // Log para verificar a resposta da API
